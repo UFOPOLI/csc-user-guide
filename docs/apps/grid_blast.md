@@ -10,7 +10,7 @@ in the servers of CSC is usually faster. However if the query sets consists of t
 sequences or more, the capacity of FGCI can be fully utilized and the through-put times are often 
 shorter than what the clusters of CSC alone could provide.
 
-##Getting grid access
+## Getting grid access
 
 To be able to use grid resources for BLAST searches, you should have:
 
@@ -19,7 +19,7 @@ To be able to use grid resources for BLAST searches, you should have:
 
 For detailed instructions, see the first chapter of the FGI user guide.
 
-##Grid-BLAST @ CSC
+## Grid-BLAST @ CSC
 
 BLAST jobs can be submitted to FGCI using **gb** (Grid Blast) command in taito.csc.fi or taito-shell.csc.fi. 
 The gb command works in the same way as the pb command used to submit BLAST jobs to the local batch queues in Puhti. 
@@ -34,7 +34,7 @@ started with the screen command.
 (More information about screen: http://www.rackaid.com/resources/linux-screen-tutorial-and-how-to/)
 
  
-##Submitting a grid BLAST job
+## Submitting a grid BLAST job
 
 Let's assume we have a set of 26 000 fasta formatted nucleotide sequences in a file called _queryseq.fasta_. The file 
 locates in the $WRKDIR directory. In this example we compare this sequence set against _nr_ database with _blastx_ command.
@@ -92,7 +92,7 @@ Now you are back in your "real" terminal. To re-connect your virtual terminal, g
 Before you log out from Taito, you should check, which Taito login node (taito-login4.csc.fi or taito-login3.csc.fi ) you are using. The virtual terminal can be reconnected only from the same login node where it it was launched. Thus if your virtual terminal and grid BLAST job are running in the taito-login4.csc.fi server you must login to taito-login4.csc.fi in order to reconnect the virtual terminal with the screen -r command.
 
  
-##Refreshing your grid proxy
+## Refreshing your grid proxy
 
 In the example above, set the grid-proxy to be valid for three days (72 hours). If your grid BLAST job need longer execution time you should update the grid-proxy before it expires. You can do this while the grid blast job is running in the background. For example, let's assume that the grid BLAST job, submitted above, have been running already for two days and it seems to need at least two more days to be completed. Then you should update the grid proxy. To do that, first login to the server where your grid BLAST is running. For example:
 ```
@@ -131,7 +131,7 @@ In addition to the the -jobid option, following options can be used with blast_g
 -    **-debug_mode**   1 or 0. Value 1 defines that the temporary files will not be removed when the job finishes.
 -    **-collect_only**    Runs the postprocessing for the successfully completed subjobs so far. New subjosb will not be submitted or retrieved.
 
-##Killing grid BLAST job
+## Killing a grid BLAST job
 
 If you wish to stop a gb run you have submitted you need to first stop the gb command by pressing:
 ```
