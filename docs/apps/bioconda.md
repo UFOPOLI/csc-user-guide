@@ -9,10 +9,6 @@ The Bioconda environment is used for two purposes in Paito:
 -    Puhti users can use bioconda module to install tools, available in Bioconda repository, to their own personal Conda environments.
 
 
-BamTools provides both a programmer's API and an end-user's toolkit for handling
-BAM files.
-
-
 [TOC]
 
 ## Available
