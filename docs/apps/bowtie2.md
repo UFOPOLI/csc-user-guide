@@ -1,7 +1,7 @@
 # Bowtie2
 
-Bowtie is an ultrafast, memory-efficient short read aligner. It aligns short DNA sequences (reads) 
-to the human genome at a rate of over 25 million 35-bp reads per hour. Bowtie indexes the genome 
+Bowtie2 is an ultrafast, memory-efficient short read aligner. It aligns short DNA sequences (reads) 
+to the human genome at a rate of over 25 million 35-bp reads per hour. Bowtie2 indexes the genome 
 with a Burrows-Wheeler index to keep its memory footprint small: typically about 2.2 GB for the 
 human genome (2.9 GB for paired-end).
 
@@ -51,8 +51,8 @@ bowtie2 -x genome -1 first_read_set.fq -2 second_read_set.fq -S output.sam
 
 **Example batch script for Puhti**
 
-In Puhti, bowtie and bowtie2 jobs should be run in puhti-shell environment or as batch jobs. Below is a sample batch job file, 
-for running a Bowtie2 paired end alignment in Taito. The recent Bowtie2 versions scale well, so you can effecteively use up 
+In Puhti, bowtie and bowtie2 jobs should be run  as batch jobs. Below is a sample batch job file, 
+for running a Bowtie2 paired end alignment in Puhti. The recent Bowtie2 versions scale well, so you can effecteively use up 
 to 16 cores in your batch job.
 
 Note that the batch job file must definbe define the project that will be used.
@@ -82,7 +82,7 @@ specific project.
 #SBATCH -n 1
 #SBATCH --nodes=1  
 #SBATCH --cpus-per-task=16
-#SBATCH --account=project_201234
+#SBATCH --account=project_123456
 #SBATCH --mem=16000
 #
 
@@ -91,7 +91,7 @@ bowtie2-build genome.fasta genome
 bowtie2 -p $SLURM_CPUS_PER_TASK -x genome -1 reads_1.fq -2 reads_2.fq > output.sam
 ```
 
-In the batch job example above one task (-n 1) is executed. The Bowtie2 job uses 16 cores (--cpus-per-task=16 ) with total of 6 GB of memory (--mem=6000). The maximum duration of the job is four hours (-t 04:00:00 ). All the cores are assigned from one computing node (--nodes=1 ). The projet that will be uses is project_201234.
+In the batch job example above one task (-n 1) is executed. The Bowtie2 job uses 16 cores (--cpus-per-task=16 ) with total of 6 GB of memory (--mem=6000). The maximum duration of the job is four hours (-t 04:00:00 ). All the cores are assigned from one computing node (--nodes=1 ). The projet that will be uses is project_123456.
 
 You can submit the batch job file to the batch job system with command:
 
