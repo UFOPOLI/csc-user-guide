@@ -111,5 +111,5 @@ servicedesk@csc.fi
 
 ## Manual
 
-More information about Bowtie2 can be found from the Bowtie2 home page.
+More information about Bowtie2 can be found from the [Bowtie2 home page](https://github.com/BenLangmead/bowtie2/blob/master/README.md).
 
