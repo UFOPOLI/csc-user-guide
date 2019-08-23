@@ -38,7 +38,7 @@ source activate env_name
 
 Later on you can deactivate the environment with command:
 ```
-source deactivate
+conda deactivate
 ```
 
 ### 2. Installing software for your own use with bioconda
@@ -57,7 +57,7 @@ vcf2bed
 To deactivate the current conda environment, run command:
 
 ```
-source deactivate
+conda deactivate
 ```
 Next time you need to use vcf2bed, it is enough that you run the set-up commands:
 
